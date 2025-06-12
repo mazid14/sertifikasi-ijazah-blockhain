@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verifikasi Dokumen</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h2>🔍 Verifikasi Keaslian Dokumen</h2>
+  <nav style="margin-bottom: 20px;">
+  <a href="index.html">🔄 Input Data</a> |
+  <a href="verifikasi.html">✅ Verifikasi</a> |
+  <a href="tampil-data.html">📋 Tampil Data</a> |
+  <a href="signaturing.html">🔐 Signaturing</a>
+</nav>
+  <form id="verifyForm">
+    <label>Nama:</label>
+    <input type="text" id="studentName" required />
+
+    <label>Universitas:</label>
+    <input type="text" id="university" required />
+
+    <button type="submit">Cek</button>
+  </form>
+
+  <div id="result"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="js/verifikasi.js"></script>
+</body>
+</html>

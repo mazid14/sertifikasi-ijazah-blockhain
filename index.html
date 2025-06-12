@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Input Sertifikasi Dokumen</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h2>📝 Input Data Sertifikasi</h2>
+  <nav style="margin-bottom: 20px;">
+  <a href="index.html">🔄 Input Data</a> |
+  <a href="verifikasi.html">✅ Verifikasi</a> |
+  <a href="tampil-data.html">📋 Tampil Data</a> |
+  <a href="signaturing.html">🔐 Signaturing</a>
+</nav>
+  <form id="certifyForm">
+    <label>Nama:</label>
+    <input type="text" id="docName" required />
+
+    <label>Universitas:</label>
+    <input type="text" id="docUniversity" required />
+
+    <label>Judul Penelitian:</label>
+    <input type="text" id="docTitle" required />
+
+    <label>IPK:</label>
+    <input type="text" id="docIPK" required />
+
+    <label>Upload PDF:</label>
+    <input type="file" id="docFile" accept=".pdf" required />
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="js/input.js"></script>
+</body>
+</html>
