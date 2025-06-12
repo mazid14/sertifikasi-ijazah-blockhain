@@ -1,1 +1,1 @@
-# sertifikasi-ijazah-blochain
+# sertifikasi-ijazah-blockchain
