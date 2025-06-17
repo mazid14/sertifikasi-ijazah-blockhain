@@ -20,7 +20,7 @@ document.getElementById('certifyForm').addEventListener('submit', async function
     const res = await fetch("https://api.pinata.cloud/pinning/pinFileToIPFS", {
       method: "POST",
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`, // ganti dengan JWT kamu
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI2MjQyOWQ5Ni0zYWVhLTQ2ZjQtYjA2YS1kMGM5NjU5ZjI5MDIiLCJlbWFpbCI6Im1hemlkYWJkdWxheml6MTRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiRlJBMSJ9LHsiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiTllDMSJ9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6ImU3MDc5MTgwZDFlZThkZTlmZDFkIiwic2NvcGVkS2V5U2VjcmV0IjoiY2ZjMmZiODI3OTUzNTA4Mjg0ZjNhNWFlYmZhNTI4YmJkMGE1MTMzMTNhN2I0MDdmNzZkMTllYmI2YjQxMGJlZiIsImV4cCI6MTc4MTI1MjIyNH0.Xhyk8UgiEVMUcwAu_5OJIb_oTUb3DKiDJVX7Vt48iyY`, // ganti dengan JWT kamu
       },
       body: formData,
     });
