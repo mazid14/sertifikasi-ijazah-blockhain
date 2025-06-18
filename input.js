@@ -1,6 +1,28 @@
 document.getElementById('certifyForm').addEventListener('submit', async function (e) {
   e.preventDefault();
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6Kqn7jlvzuKhzzzBveB4mBb9CdSNAids",
+    authDomain: "sertifikasi-ijazah-blockchain.firebaseapp.com",
+    projectId: "sertifikasi-ijazah-blockchain",
+    storageBucket: "sertifikasi-ijazah-blockchain.firebasestorage.app",
+    messagingSenderId: "773758166917",
+    appId: "1:773758166917:web:fc49960a2e3da5d9e4c6ec",
+    measurementId: "G-2Z58NL6NT0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   const name = document.getElementById('docName').value;
   const university = document.getElementById('docUniversity').value;
   const title = document.getElementById('docTitle').value;
@@ -26,7 +48,19 @@ document.getElementById('certifyForm').addEventListener('submit', async function
       },
       body: formData
     });
-
+  try {
+  const docRef = await addDoc(collection(db, "sertifikat"), {
+    nama: name,
+    universitas: university,
+    judul: title,
+    ipk: ipk,
+    fileCID: fileCID,
+    timestamp: new Date()
+  });
+  console.log("✅ Data berhasil disimpan ke Firestore, ID:", docRef.id);
+} catch (e) {
+  console.error("❌ Gagal simpan ke Firestore:", e);
+}
     if (!uploadResponse.ok) {
       throw new Error("Gagal upload file. Status: " + uploadResponse.status);
     }
